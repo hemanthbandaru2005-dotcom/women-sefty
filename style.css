@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(-45deg, #ff416c, #ff4b2b, #833ab4, #fd1d1d);
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: gradientBG 12s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,54 +20,57 @@ body {
 .container {
   text-align: center;
   background: rgba(0,0,0,0.6);
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  max-width: 400px;
-  width: 90%;
+  padding: 35px;
+  border-radius: 18px;
+  max-width: 420px;
+  width: 92%;
 }
 
 button {
   background: #ff0033;
   color: white;
-  padding: 15px 30px;
+  padding: 14px 25px;
   border: none;
   border-radius: 12px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   margin: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: 0.2s;
 }
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+button:active {
+  transform: scale(0.95);
 }
 
 #stopBtn {
   background: #00c853;
 }
 
+#sosBtn.active {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { background: #ff0033; }
+  50% { background: #ff4b2b; }
+  100% { background: #ff0033; }
+}
+
 #alertBox {
   margin-top: 20px;
-  font-size: 15px;
+  font-size: 14px;
   text-align: left;
-  max-height: 300px;
+  max-height: 250px;
   overflow-y: auto;
 }
 
 #alertBox div {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.15);
   padding: 8px;
   border-radius: 8px;
   margin-bottom: 8px;
-}
-
-#contactList {
-  list-style: none;
-  padding: 0;
-}
-
-#contactList li {
-  margin: 5px 0;
 }
